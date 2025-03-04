@@ -15,10 +15,11 @@ const Footer = () => {
                     Nuestra empresa nace desde el 2018 para ofrecer un servicio de
                     mudanzas principalmente de casas, entendiendo que cada hogar tiene
                     historias, recuerdos y pertenencias que merecen el máximo cuidado.
-                </p>
-                <p>
                     GS PRO MASTER MOVING tiene como objetivo hacer que el proceso de
                     mudanza sea lo más fácil y libre de estrés.
+                </p>
+                <p>
+                    Puedes encontrarnos en 
                 </p>
                 <div className="social-icons">
                     <FaFacebookF />
@@ -32,14 +33,18 @@ const Footer = () => {
                 <p>Contáctanos hoy mismo.</p>
                 <div className="contact-info">
                     <div className="contact-item">
-                        <img src={phone} alt="Teléfono" />
+                        <div className="logo-container">
+                            <img src={phone} alt="Teléfono"/>
+                        </div>
                         <div className="contact-text">
                             <strong>Por teléfono:</strong>
                             <p>475-343-9497</p>
                         </div>
                     </div>
                     <div className="contact-item">
-                        <img src={email} alt="E-mail" />
+                        <div className="logo-container">
+                            <img src={email} alt="Email"/>
+                        </div>
                         <div className="contact-text">
                             <strong>Por e-mail:</strong>
                             <p>email@gspromastermoving.com</p>
