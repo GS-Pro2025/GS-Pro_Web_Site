@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
 
 body {
     margin: 0;
@@ -7,6 +7,7 @@ body {
     background-color: #fcfcfc;
 }
 
+/* Navbar */
 .navbar {
     width: 100%;
     display: flex;
@@ -25,38 +26,34 @@ body {
     padding: 0 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 0; 
-}
-
+/* Logo */
 .logo-container img {
     height: 50px; 
     width: auto;
-    margin-right: 0px;
 }
 
+/* Elementos de navegación */
 .nav-elements {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .nav-elements ul {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: row;
+    gap: 60px;
 }
 
 .nav-elements ul li {
     margin-right: 20px; 
 }
 
+/* Botones */
 button {
     background-color: transparent;
     color: white;
@@ -68,19 +65,88 @@ button {
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease;
     height: 50px;
+    gap: 20px;
 }
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
 }
-/* Boton contactenos*/
+
+/* Botón Contactenos */
 .contact-button {
     height: 50px;
     width: 150px;
     padding: 0px;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     transition: 0.3s;
+    margin-left: 20px;
 }
 
+/* Menú hamburguesa (oculto en PC) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    /* Mostrar el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconder menú en móviles hasta que se active */
+    .nav-elements {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, #0458AB, #4E5AB1);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Cuando el menú está activo */
+    .nav-elements.active {
+        display: flex;
+    }
+
+    /* Botones en móvil */
+    .nav-elements ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-elements ul li {
+        margin: 10px 0;
+    }
+
+    .nav-elements button {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Contactenos en móvil centrado */
+    .contact-button {
+        justify-content: center;
+        width: auto; 
+        padding: 10px 0;
+        font-size: 18px; 
+        text-align: center;
+    }
+    .contact-button img {
+        height: 25px; 
+        width: auto;
+    }
+
+}
