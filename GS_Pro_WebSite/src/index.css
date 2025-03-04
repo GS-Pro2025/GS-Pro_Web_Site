@@ -23,10 +23,12 @@ a:hover {
 }
 
 body {
-  background-image: url(./assets/azul-537.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 100vh; 
+  background-image: url('/src/assets/azul-537.png'); /* Ruta correcta */
+  background-size: cover; /* Ajusta la imagen sin distorsionarla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+  height: 100vh;
   margin: 0;
 }
+
