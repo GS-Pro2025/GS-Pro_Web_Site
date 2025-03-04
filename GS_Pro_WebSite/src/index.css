@@ -31,4 +31,14 @@ body {
   height: 100vh;
   margin: 0;
 }
+div{
+  display: inline-block;
+  padding: 2rem
+}
+.claseEncuesta{
+  background-color: #535bf2
+}
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

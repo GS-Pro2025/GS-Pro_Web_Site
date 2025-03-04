@@ -1,5 +1,10 @@
 import fondo from "./assets/azul-537.png";
 import "./index.css"; 
+import Home from "./components/Home";
 
-export default App;
 
+function App() {
+    return <Home />;
+  }
+  
+export default App;
