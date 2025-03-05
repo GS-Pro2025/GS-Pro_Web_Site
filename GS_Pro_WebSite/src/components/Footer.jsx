@@ -30,7 +30,7 @@ const Footer = () => {
                 <div
                     className="w-full md:w-[70%] bg-[url('src/assets/footerRectangleBig.webp')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
                 >
-                    <h2 className="text-2xl font-bold">CONTACT</h2>
+                    <h2 className="text-2xl font-roboto">CONTACT</h2>
                     <p>Contact us now</p>
                     <div className="flex justify-center gap-8 w-full md:w-[80%] my-5 flex-col md:flex-row">
                         {/* Contact info - phone*/}
@@ -51,7 +51,7 @@ const Footer = () => {
                             </div>
                             <div className="flex flex-col text-left">
                                 <strong className="text-sm text-white">E-mail:</strong>
-                                <p className="text-xs text-white whitespace-normal break-words">
+                                <p className="text-xs text-white whitespace-normal break-all">
                                     generalmanager@gspromastermoving.com
                                 </p>
                             </div>

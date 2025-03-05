@@ -13,7 +13,7 @@ const Vision = () => {
       />
   
       {/* middle-round container */}
-      <div className="overflow-hidden w-full flex justify-end h-210 pt-30 md:pr-0">
+      <div className="overflow-hidden w-full flex justify-end h-190 pt-10 md:pt-30 md:pr-0">
         {/* Blue circle */}
         <div
           className="absolute rigth-0 flex flex-col items-center justify-center w-[100vw] sm:w-[60vw] max-w-[30rem] 
