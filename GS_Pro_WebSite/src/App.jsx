@@ -1,5 +1,5 @@
 import fondo from "./assets/azul-537.png";
-import "./index.css"; 
+import "./App.css"; 
 import Home from "./components/Home";
 
 
