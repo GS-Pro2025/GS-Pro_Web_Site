@@ -8,11 +8,11 @@ const Navbar = () => {
     const [contactImage, setContactImage] = useState(buttonContactUs1);
 
     return (
-        <nav className="w-full flex items-center p-2.5 bg-gradient-to-r from-[#0458AB] to-[#4E5AB1] fixed top-0 left-0 z-50">
+        <nav className="fixed z-50 w-full flex items-center p-2.5 bg-gradient-to-r from-[#0458AB] to-[#4E5AB1] fixed top-0 left-0 z-50">
             <div className="max-w-[1100px] mx-auto px-4 flex items-center justify-between w-full h-full">
                 {/* Logo */}
                 <div className="logo-container">
-                    <img src={logo} id="logo" alt="Logo" className="h-12 w-auto" />
+                    <img src={logo} id="logo" alt="Logo" className="h-12 w-auto max-w-50" />
                 </div>
                 {/**Libre baskerville */}
                 {/* Contact button mobile*/}
@@ -26,7 +26,7 @@ const Navbar = () => {
 
                 {/* Menu button for mobile*/}
                 <button
-                    className="text-white text-2xl bg-transparent border-none cursor-pointer md:hidden"
+                    className="text-white text-2xl bg-transparent border-none cursor-pointer pr-10 md:hidden"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     ☰
