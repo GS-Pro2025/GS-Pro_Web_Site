@@ -1,3 +1,6 @@
+
+import fondo from "./assets/azul-537.png";
+
 import './App.css';
 import Navbar from './components/Navbar';
 import { useState } from 'react'
@@ -8,9 +11,10 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Vision/>
+      <Home />
       <Footer/>
     </>
   );
 } 
 export default App;
+
