@@ -10,7 +10,6 @@ const Vision = () => {
         alt="Círculos decorativos"
         className="absolute w-[45vw] md:w-[35vw] max-w-[300px] h-auto
         top-[45%] md:top-[50%] left-[35%] md:left-[70%] lg:left-[55%] 
-        transform -translate-x-1/2 -translate-y-1/2 z-[-1]"
         transform -translate-x-1/8 -translate-y-1/4 z-[-1]"
       />
 
@@ -22,7 +21,6 @@ const Vision = () => {
           h-[70vw] sm:h-[60vw] max-h-[30rem] aspect-square
           bg-gradient-to-r from-[#0458AB] to-[#60A3D9] rounded-full p-8 sm:p-6 text-white text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Visión</h2>
           <h2 className="text-5xl font-Roboto text-[#60A3D9] mb-4 mr-50">Visión</h2>
           <p className="text-sm px-6 text-justify">
             At GS PRO-MASTER MOVING LLC, our mission is to provide a comprehensive moving service that stands out
