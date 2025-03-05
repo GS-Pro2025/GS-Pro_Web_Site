@@ -3,8 +3,9 @@
 
 
 #root {
-  max-width: 100%;
+  max-width: 100%;/*Made changes here for helping footer*/
   margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 

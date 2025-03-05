@@ -1,20 +1,20 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import buttonContactUs1 from "../assets/buttonContactUs1.png";
-import buttonContactUs2 from "../assets/buttonContactUs2.png";
+import logo from "../assets/logo.webp";
+import buttonContactUs1 from "../assets/buttonContactUs1.webp";
+import buttonContactUs2 from "../assets/buttonContactUs2.webp";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [contactImage, setContactImage] = useState(buttonContactUs1);
 
     return (
-        <nav className="w-full flex items-center p-2.5 bg-gradient-to-r from-[#0458AB] to-[#4E5AB1] fixed top-0 left-0 z-50">
+        <nav className="fixed z-50 w-full flex items-center p-2.5 bg-gradient-to-r from-[#0458AB] to-[#4E5AB1] fixed top-0 left-0 z-50">
             <div className="max-w-[1100px] mx-auto px-4 flex items-center justify-between w-full h-full">
                 {/* Logo */}
                 <div className="logo-container">
-                    <img src={logo} id="logo" alt="Logo" className="h-12 w-auto" />
+                    <img src={logo} id="logo" alt="Logo" className="h-12 w-auto max-w-50" />
                 </div>
-
+                {/**Libre baskerville */}
                 {/* Contact button mobile*/}
                 <button
                     className="h-8 w-30 flex items-center justify-center gap-2 transition-all duration-300 ml-5 mr-5 bg-transparent border-none md:hidden"
@@ -26,7 +26,7 @@ const Navbar = () => {
 
                 {/* Menu button for mobile*/}
                 <button
-                    className="text-white text-2xl bg-transparent border-none cursor-pointer md:hidden"
+                    className="text-white text-2xl bg-transparent border-none cursor-pointer pr-10 md:hidden"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     ☰
