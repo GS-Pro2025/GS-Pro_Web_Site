@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import '@fontsource/roboto';
+
 
 #root {
   max-width: 100%;
