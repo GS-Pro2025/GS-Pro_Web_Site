@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import '@fontsource/roboto';
 
-
 #root {
   max-width: 100%;/*Made changes here for helping footer*/
   margin: 0 auto;
@@ -39,8 +38,4 @@
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
