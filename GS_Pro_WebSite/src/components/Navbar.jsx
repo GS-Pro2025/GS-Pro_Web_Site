@@ -1,7 +1,7 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import buttonContactUs1 from "../assets/buttonContactUs1.png";
-import buttonContactUs2 from "../assets/buttonContactUs2.png";
+import logo from "../assets/logo.webp";
+import buttonContactUs1 from "../assets/buttonContactUs1.webp";
+import buttonContactUs2 from "../assets/buttonContactUs2.webp";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <div className="logo-container">
                     <img src={logo} id="logo" alt="Logo" className="h-12 w-auto" />
                 </div>
-
+                {/**Libre baskerville */}
                 {/* Contact button mobile*/}
                 <button
                     className="h-8 w-30 flex items-center justify-center gap-2 transition-all duration-300 ml-5 mr-5 bg-transparent border-none md:hidden"

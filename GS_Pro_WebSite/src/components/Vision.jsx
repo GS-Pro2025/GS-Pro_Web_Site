@@ -1,5 +1,5 @@
 import React from "react";
-import CirclesSVG from "/src/assets/blue_circles.svg"; 
+import CirclesSVG from "/src/assets/blue_circles.webp"; 
 
 const Vision = () => {
   return (

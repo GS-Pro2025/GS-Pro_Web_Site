@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../assets/footerLogo.svg";
-import phone from "../assets/footerPhone.svg";
-import email from "../assets/footerEmail.svg";
+import logo from "../assets/footerLogo.webp";
+import phone from "../assets/phone.webp";
+import email from "../assets/mail.webp";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -28,14 +28,14 @@ const Footer = () => {
 
                 {/* Right Footer */}
                 <div
-                    className="w-full md:w-[70%] bg-[url('src/assets/footerRectangleBig.svg')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
+                    className="w-full md:w-[70%] bg-[url('src/assets/footerRectangleBig.webp')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
                 >
                     <h2 className="text-2xl font-bold">CONTACT</h2>
                     <p>Contact us now</p>
                     <div className="flex justify-center gap-8 w-full md:w-[80%] my-5 flex-col md:flex-row">
                         {/* Contact info - phone*/}
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
-                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.svg')] bg-contain bg-no-repeat bg-center flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
                                 <img src={phone} alt="Teléfono" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
@@ -46,7 +46,7 @@ const Footer = () => {
 
                         {/* Contact info - Email */}
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
-                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.svg')] bg-contain bg-no-repeat bg-center flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
                                 <img src={email} alt="Email" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
