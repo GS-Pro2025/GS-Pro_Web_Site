@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../assets/footerLogo.webp";
 import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
+import bgImage from "../assets/footerRectangleBig.webp";
+import logoContainer from "../assets/logoContainer.webp";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -12,10 +14,10 @@ const Footer = () => {
                 <div className="w-full md:w-[30%] bg-gradient-to-r from-[#4E5AB1] to-[#0458AB] p-8 flex flex-col justify-center items-center text-justify">
                     <img src={logo} alt="Logo" className="w-[500px] h-auto" />
                     <p className="max-w-full mb-4">
-                    Our company was founded in 2018 to provide a moving service primarily for homes, 
-                    understanding that each household has stories, memories, 
-                    and belongings that deserve the utmost care.
-                    GS PRO MASTER MOVING aims to make the moving process as easy and stress-free as possible.
+                        Our company was founded in 2018 to provide a moving service primarily for homes,
+                        understanding that each household has stories, memories,
+                        and belongings that deserve the utmost care.
+                        GS PRO MASTER MOVING aims to make the moving process as easy and stress-free as possible.
                     </p>
                     <p>You can find us at:</p>
                     <div className="flex gap-4 text-xl">
@@ -27,14 +29,17 @@ const Footer = () => {
                 </div>
                 {/* Right Footer */}
                 <div
-                    className="w-full md:w-[70%] bg-[url('./assets/footerRectangleBig.webp')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
+                    className="w-full md:w-[70%] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
+                    style={{ backgroundImage: `url(${bgImage})` }}
                 >
                     <h2 className="text-2xl font-roboto">CONTACT</h2>
                     <p>Contact us now</p>
                     <div className="flex justify-center gap-8 w-full md:w-[80%] my-5 flex-col md:flex-row">
                         {/* Contact info - phone*/}
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
-                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-contain bg-no-repeat bg-center flex-shrink-0"
+                                style={{ backgroundImage: `url(${logoContainer})` }}>
+
                                 <img src={phone} alt="Teléfono" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
@@ -45,7 +50,9 @@ const Footer = () => {
 
                         {/* Contact info - Email */}
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
-                            <div className="flex items-center justify-center w-12 h-12 bg-[url('./assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-contain bg-no-repeat bg-center flex-shrink-0"
+                                style={{ backgroundImage: `url(${logoContainer})` }}>
+
                                 <img src={email} alt="Email" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
