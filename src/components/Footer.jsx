@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/footerLogo.webp";
-import phone from "../assets/phone.webp";
-import email from "../assets/mail.webp";
+import phone from "../assets/phone.svg";
+import email from "../assets/mail.svg";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -19,16 +19,15 @@ const Footer = () => {
                     </p>
                     <p>You can find us at:</p>
                     <div className="flex gap-4 text-xl">
-                        <FaFacebookF />
-                        <FaInstagram />
-                        <FaTwitter />
-                        <FaYoutube />
+                        <FaFacebookF className="hover:text-blue-700 transition-colors duration-300" />
+                        <FaInstagram className="hover:text-pink-700 transition-colors duration-300" />
+                        <FaTwitter className="hover:text-blue-600 transition-colors duration-300" />
+                        <FaYoutube className="hover:text-red-700 transition-colors duration-300" />
                     </div>
                 </div>
-
                 {/* Right Footer */}
                 <div
-                    className="w-full md:w-[70%] bg-[url('src/assets/footerRectangleBig.webp')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
+                    className="w-full md:w-[70%] bg-[url('./assets/footerRectangleBig.webp')] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
                 >
                     <h2 className="text-2xl font-roboto">CONTACT</h2>
                     <p>Contact us now</p>
@@ -46,7 +45,7 @@ const Footer = () => {
 
                         {/* Contact info - Email */}
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
-                            <div className="flex items-center justify-center w-12 h-12 bg-[url('/src/assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-[url('./assets/logoContainer.webp')] bg-contain bg-no-repeat bg-center flex-shrink-0">
                                 <img src={email} alt="Email" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
