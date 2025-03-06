@@ -4,17 +4,23 @@ import whatsappIcon from "../assets/whatsapp.webp";
 import backgroundImage from "../assets/azul-537.webp";
 
 const Home = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
-  // Handle animation on page load
+  // Detectar cuando la imagen de fondo se carga completamente
   useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 200);
+    const img = new Image();
+    img.src = backgroundImage;
+    img.onload = () => {
+      setImageLoaded(true);
+      setTimeout(() => {
+        setAnimate(true);
+      }, 200);
+    };
   }, []);
 
-  // Handle scroll event
+  // Manejar el scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -27,22 +33,22 @@ const Home = () => {
   return (
     <div className="relative min-h-screen font-roboto grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10 transition-all duration-500">
       
-      {/* Imagen de fondo con animación */}
+      {/* Imagen de fondo con animación después de cargarse */}
       <div
-        className="absolute inset-0 w-full h-full transition-all duration-500"
+        className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ${imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          transform: `scale(${Math.max(1 - scrollY / 1000, 0.5)})`, // Reduce tamaño
-          opacity: Math.max(1 - scrollY / 500, 0), // Se desvanece
-          transition: "transform 0.5s ease-out, opacity 0.5s ease-out",
+          transform: `scale(${Math.max(1 - scrollY / 1000, 0.5)})`, // Reduce tamaño con scroll
+          opacity: Math.max(1 - scrollY / 500, 0), // Se desvanece con scroll
+          transition: "transform 0.8s ease-out, opacity 0.8s ease-out",
           zIndex: -1, // Se mantiene en el fondo
         }}
       ></div>
 
-      {/* Formulario (SIN CAMBIOS) */}
+      {/* Formulario (sin cambios) */}
       <div className="relative flex items-center justify-center md:block">
         <div className="bg-white p-6 m-20 rounded-lg shadow-xl w-[90%] max-w-[350px] min-h-[350px] border-2 border-[#2E1EA5] 
         mx-auto md:fixed md:top-1/10 md:left-9">
@@ -61,19 +67,19 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Logo y mensaje de bienvenida */}
+      {/* Logo y mensaje de bienvenida con animaciones más suaves */}
       <div
-        className={`flex flex-col items-center md:items-start text-white text-center md:text-left transition-all duration-1000 ease-out transform ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+        className={`flex flex-col items-center md:items-start text-white text-center md:text-left transition-all duration-[1500ms] ease-out transform 
+        ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         style={{
           opacity: Math.max(1 - scrollY / 400, 0), // Logo & mensaje desaparecen al hacer scroll
-          transform: `translateY(${scrollY / 4}px)`, // Se mueve ligeramente hacia arriba
+          transform: `translateY(${scrollY / 5}px)`, // Se mueve ligeramente hacia arriba
         }}
       >
         <img
           src={logo}
           alt="GS PRO Logo"
-          className="w-48 md:w-60 transition-all duration-1000 ease-out"
+          className="w-48 md:w-60 transition-all duration-[1500ms] ease-out"
         />
 
         <h2 className="mt-4 text-lg md:text-2xl font-bold font-[Libre_Baskerville]">
