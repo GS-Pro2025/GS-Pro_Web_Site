@@ -7,19 +7,19 @@ const Home = () => {
   const { scrollY } = useScroll();
 
   // Background animation based on scroll position
-  const backgroundScale = useTransform(scrollY, [0, 500], [1, 0.5]);
-  const backgroundOpacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const backgroundScale = useTransform(scrollY, [0, 500], [1, 0.8]);
+  const backgroundOpacity = useTransform(scrollY, [0, 500], [1, 0.8]);
 
   // Text animation based on scroll position
-  const textOpacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const textTranslate = useTransform(scrollY, [0, 400], [0, -40]);
+  const textOpacity = useTransform(scrollY, [0, 400], [1, 0.8]);
+  const textTranslate = useTransform(scrollY, [0, 400], [0, -10]);
 
   return (
-    <motion.div className="relative min-h-screen font-roboto grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10">
+    <motion.div className="relative min-h-screen font-[Libre_Baskerville] grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10">
       
       {/* Animated background */}
       <motion.div
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full -z-10"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -38,7 +38,7 @@ const Home = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.div
-          className="bg-white p-6 m-20 rounded-lg shadow-xl w-[90%] max-w-[350px] min-h-[350px] border-2 border-[#2E1EA5] mx-auto md:fixed md:top-1/10 md:left-9"
+          className="bg-white p-6 m-20 rounded-lg shadow-xl w-[90%] max-w-[350px] min-h-[350px] border-2 border-[#2E1EA5] mx-auto md:fixed md:top-1/10 md:left-12"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -55,28 +55,29 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      {/* Animated logo and welcome message */}
+      {/* Welcome message and centered logo */}
       <motion.div
-        className="flex flex-col items-center md:items-start text-white text-center md:text-left"
-        style={{ opacity: textOpacity, y: textTranslate }}
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        className="mt-6 flex flex-col items-center md:items-start text-white text-center md:text-left w-full"
+        style={{ opacity: textOpacity, transform: `translateY(${textTranslate}px)` }}
       >
-        <motion.img
-          src={logo}
-          alt="GS PRO Logo"
-          className="w-48 md:w-60"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
-        <h2 className="mt-4 text-lg md:text-2xl font-bold font-[Libre_Baskerville]">
-          Welcome to GS-PRO MASTER <br />
-          <span className="text-sm md:text-lg">
+        {/* Welcome message */}
+        <motion.h2
+          className="text-3xl md:text-5xl font-bold text-center"
+        >
+          Welcome to <span className="text-[#0458AB]">GS-PRO MASTER</span> <br />
+          <span className="text-lg md:text-2xl font-light">
             We take care of your move, you enjoy the change.
           </span>
-        </h2>
+        </motion.h2>
+
+        {/* Centered logo below the message */}
+        <motion.div className="mt-6 flex justify-center w-full">
+          <motion.img
+            src={logo}
+            alt="GS PRO Logo"
+            className="w-48 md:w-72" // Increased logo size
+          />
+        </motion.div>
       </motion.div>
 
       {/* Floating WhatsApp button */}
