@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const services = [
-  { id: 1, title: "Servicio 1", image: new URL("../assets/s1.jpg", import.meta.url).href },
+  { id: 1, title: "Servicio 1a", image: new URL("../assets/s1.jpg", import.meta.url).href },
   { id: 2, title: "Servicio 2", image: new URL("../assets/s2.jpg", import.meta.url).href },
   { id: 3, title: "Servicio 3", image: new URL("../assets/s3.jpg", import.meta.url).href },
 ];
@@ -41,7 +41,7 @@ const Servicios = () => {
                   {/* Tarjeta deslizante */}
                   <div className="absolute bottom-0 left-0 right-0 bg-blue-900 text-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                     <h3 className="text-xl font-semibold">{service.title}</h3>
-                    <p className="text-sm mt-1">Información adicional del {service.title}. Explora más detalles.</p>
+                    <p className="text-sm mt-1">Información  del {service.title}</p>
                   </div>
                 </div>
               </div>
