@@ -20,12 +20,12 @@ const slides = [
     },
 ];
 
-const TailwindCarousel = () => {
+const VisionMisionCarousel = () => {
     const [hovered, setHovered] = useState(false);
 
     return (
         <div
-            className="relative w-80 max-w-md h-160 md:h-160 m-10 mt-10 md:m-0 md:w-100 md:m-25 md:ml-auto flex justify-center items-center md:p-5"
+            className="relative w-80 max-w-md h-160 md:h-160 m-10 mt-10 md:m-30 md:w-100 md:m-25 md:ml-auto flex justify-center items-center md:p-5"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={() => setHovered((prev) => !prev)} 
@@ -52,4 +52,4 @@ const TailwindCarousel = () => {
     );
 };
 
-export default TailwindCarousel;
+export default VisionMisionCarousel;
