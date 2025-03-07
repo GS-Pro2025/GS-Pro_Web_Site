@@ -7,17 +7,17 @@ import logoazul from "../assets/logoazul.webp";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [contactImage, setContactImage] = useState(buttonContactUs1);
-    const [navbarBg, setNavbarBg] = useState("bg-white/20");
+    const [navbarBg, setNavbarBg] = useState("bg-white/20 shadow-md");
     const [currentLogo, setCurrentLogo] = useState(logo);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setNavbarBg("bg-white shadow-md");
+                setNavbarBg("bg-white shadow-lg");
                 setCurrentLogo(logoazul);
             } else {
-                setNavbarBg("bg-white/20");
+                setNavbarBg("bg-white/20 shadow-md");
                 setCurrentLogo(logo);
             }
         };
@@ -27,65 +27,48 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed z-50 w-full flex items-center p-2 md:p-3 transition-all duration-300 ${navbarBg} top-0 left-0`}>
+        <nav className={`fixed z-50 w-full flex items-center p-3 transition-all duration-300 ${navbarBg} top-0 left-0`}>
             <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between w-full h-full">
                 {/* Logo */}
-                <div className="logo-container">
-                    <img src={currentLogo} id="logo" alt="Logo"
-                        className="h-16 w-auto max-w-60 transition-all duration-300 md:h-24 md:max-w-72" />
+                <div>
+                    <img src={currentLogo} alt="Logo" className="h-16 w-auto md:h-24" />
                 </div>
 
-                {/* Contact button mobile*/}
+                {/* Botón de menú para móviles */}
+                <button className="text-[#0458AB] text-3xl md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+                    {menuOpen ? "✖" : "☰"}
+                </button>
+
+                {/* Menú de navegación */}
+                <div className={`absolute top-20 left-0 w-full bg-white md:static md:bg-transparent md:flex md:items-center md:space-x-10 md:justify-end ${menuOpen ? "block" : "hidden"}`}>
+                    <div className="flex flex-col md:flex-row md:items-center w-full md:w-auto text-[#0458AB]">
+                        <div className="relative group px-6 py-3 md:p-0">
+                            <span className="text-[#0458AB] text-xl font-semibold cursor-pointer block md:inline" onClick={() => setDropdownOpen(!dropdownOpen)}>
+                                About us
+                            </span>
+                            <div className={`absolute left-0 mt-2 w-48 bg-white rounded-lg p-2 md:group-hover:block ${dropdownOpen ? "block" : "hidden"}`}>
+                                <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Who we are</a>
+                                <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Mission</a>
+                                <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Vision</a>
+
+
+                            </div>
+                        </div>
+                        <a href="#" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Ethos</a>
+                        <a href="#" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Services</a>
+                        <a href="#" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Team</a>
+                        <a href="#" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Comments</a>
+                    </div>
+                </div>
+
+                {/* Botón de contacto (solo visible en escritorio) */}
                 <button
-                    className="h-10 w-32 flex items-center justify-center gap-2 transition-all duration-300 ml-5 mr-5 bg-transparent border-none md:hidden"
+                    className="hidden md:flex h-12 w-40 items-center justify-center transition-all duration-300 ml-6 border-2 border-[#0458AB] shadow-md rounded-lg"
                     onMouseEnter={() => setContactImage(buttonContactUs2)}
                     onMouseLeave={() => setContactImage(buttonContactUs1)}
                 >
                     <img src={contactImage} alt="Contáctenos" className="h-full w-auto" />
                 </button>
-
-                {/* Menu button for mobile */}
-                <button
-                    className="text-black text-3xl bg-transparent border-none cursor-pointer pr-10 md:hidden"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    ☰
-                </button>
-
-                {/* Enlaces del Navbar */}
-                <div className={`md:flex md:items-center md:space-x-10 ${menuOpen ? "flex flex-col" : "hidden md:flex"}`}>
-                    {/* Menú desplegable Nosotros */}
-                    <div className="relative group">
-                        <span
-                            className="text-black text-xl font-semibold cursor-pointer px-6 py-3 transition-all duration-300 border-b-2 border-transparent group-hover:border-black"
-                            onClick={() => setDropdownOpen(!dropdownOpen)}
-                        >
-                            Nosotros
-                        </span>
-                        {/* Opciones desplegables */}
-                        <div className={`absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg p-2 ${dropdownOpen ? "block" : "hidden"} group-hover:block`}>
-                            <a href="#" className="block px-4 py-2 text-black hover:bg-gray-100">Quiénes Somos</a>
-                            <a href="#" className="block px-4 py-2 text-black hover:bg-gray-100">Misión</a>
-                            <a href="#" className="block px-4 py-2 text-black hover:bg-gray-100">Visión</a>
-                        </div>
-                    </div>
-
-                    <span className="text-black text-xl font-semibold cursor-pointer px-6 py-3 transition-all duration-300 border-b-2 border-transparent hover:border-black">
-                        Valores
-                    </span>
-                    <span className="text-black text-xl font-semibold cursor-pointer px-6 py-3 transition-all duration-300 border-b-2 border-transparent hover:border-black">
-                        Servicios
-                    </span>
-
-                    {/* Contact button desktop */}
-                    <button
-                        className="h-12 w-40 hidden md:flex items-center justify-center gap-2 transition-all duration-300 ml-6 bg-transparent border-none"
-                        onMouseEnter={() => setContactImage(buttonContactUs2)}
-                        onMouseLeave={() => setContactImage(buttonContactUs1)}
-                    >
-                        <img src={contactImage} alt="Contáctenos" className="h-full w-auto" />
-                    </button>
-                </div>
             </div>
         </nav>
     );
