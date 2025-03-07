@@ -23,11 +23,10 @@ const Vision = () => {
         >
           <h2 className="text-5xl sm:text-5xl font-['Libre_Baskerville'] text-[#60A3D9] mb-4 mr-20 sm:mr-60">Visión</h2>
           <p className="text-xs sm:text-lg px-2 text-justify p-0 mr-8 ml-2 sm:mr-10 sm:ml-10">
-            At GS PRO-MASTER MOVING LLC, our mission is to provide a comprehensive moving service that stands out
-            for its quality, efficiency, and customer care. We are committed to handling every move with the utmost care 
-            and professionalism, supported by a highly trained team. We believe in the importance of a personalized approach, 
-            adapting to the unique needs of each client, from packing and wrapping to protecting their belongings during transport.
-            Our goal is to make every move a smooth and stress-free experience, becoming a reliable ally at every stage of the process.
+          Our vision is to become the leading company in the moving industry, recognized for our innovation, 
+          excellence in service, and commitment to customer satisfaction.  
+          We aim to expand our operations nationally and internationally, continuously improving our 
+          services to enhance the customer experience and build a reputation based on trust, safety, and quality.
           </p>
         </div>
       </div>
