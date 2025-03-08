@@ -4,7 +4,7 @@ import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
 import bgImage from "../assets/footerRectangleBig.webp";
 import logoContainer from "../assets/logoContainer.webp";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {FaFacebookF, FaInstagram} from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -21,10 +21,15 @@ const Footer = () => {
                     </p>
                     <p>You can find us at:</p>
                     <div className="flex gap-4 text-xl">
-                        <FaFacebookF className="hover:text-blue-700 transition-colors duration-300" />
-                        <FaInstagram className="hover:text-pink-700 transition-colors duration-300" />
-                        <FaTwitter className="hover:text-blue-600 transition-colors duration-300" />
-                        <FaYoutube className="hover:text-red-700 transition-colors duration-300" />
+                        <a href="https://www.instagram.com/gspromaster?igsh=MTN0enpjbHV5Zm9zNg==">
+                            <FaInstagram className="hover:text-pink-600 transition-colors duration-300" />
+                        </a>
+                        <a href="https://www.facebook.com/share/19qdmwewfe/?mibextid=wwXIfr">
+                            <FaFacebookF className="hover:text-blue-700 transition-colors duration-300" />
+                        </a>
+                        <a href="https://www.facebook.com/share/18NJGVT2KN/?mibextid=wwXIfr ">
+                            <FaFacebookF className="hover:text-blue-700 transition-colors duration-300" />
+                        </a>
                     </div>
                 </div>
                 {/* Right Footer */}
@@ -39,7 +44,6 @@ const Footer = () => {
                         <div className="flex items-center justify-start bg-white/10 p-4 rounded-lg w-full md:w-[270px] gap-4 flex-shrink-0">
                             <div className="flex items-center justify-center w-12 h-12 bg-contain bg-no-repeat bg-center flex-shrink-0"
                                 style={{ backgroundImage: `url(${logoContainer})` }}>
-
                                 <img src={phone} alt="Teléfono" className="w-8 h-8 object-contain" />
                             </div>
                             <div className="flex flex-col text-left">
