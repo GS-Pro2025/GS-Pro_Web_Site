@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const slides = [
     {
@@ -22,32 +22,66 @@ const slides = [
 
 const VisionMisionCarousel = () => {
     const [hovered, setHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    {/** This code check if is mobile */}
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const mobileBreakpoint = 768; {/** Resolution 768 for mobile */}
+            setIsMobile(window.innerWidth <= mobileBreakpoint);
+        };
+
+        // Verificar al cargar el componente
+        checkIsMobile();
+
+        // Escuchar cambios en el tamaño de la pantalla
+        window.addEventListener("resize", checkIsMobile);
+
+        // Limpiar el event listener al desmontar el componente
+        return () => window.removeEventListener("resize", checkIsMobile);
+    }, []);
+
+    // Manejar el hover o clic dependiendo del dispositivo
+    const handleInteraction = () => {
+        if (isMobile) {
+            setHovered((prev) => !prev); // Alternar entre Misión y Visión en móviles
+        }
+    };
 
     return (
-        <div
-            className="relative w-80 max-w-md h-160 md:h-160 m-10 mt-10 md:m-30 md:w-100 md:m-25 md:ml-auto flex justify-center items-center md:p-5"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            onClick={() => setHovered((prev) => !prev)} 
-        >{/* It changes to onClick for mobile */}
-            {slides.map((slide, index) => {
-                const isFront = hovered ? index === 1 : index === 0;
+        <div className="relative w-full h-screen flex justify-center items-center">
+            {/* Texto que aparece en el lado izquierdo */}
+            <div className="absolute hidden md:block left-5 md:left-20 top-1/2 transform -translate-y-1/2 text-4xl md:text-8xl font-bold text-gray-700 font-['Libre_Baskerville'] z-0">
+                {hovered ? "VISION" : "MISION"}
+            </div>
 
-                return (
-                    <div
-                        key={index}
-                        className={`absolute w-full md:w-5/6 md:w-full h-6/7 md:h-full rounded-lg shadow-lg 
-                            flex flex-col justify-start items-center md:justify-center md:items-center text-white  
-                            p-5 md:p-5 transition-all duration-500 right-0 transform
-                        ${isFront ? "scale-100 z-10" : "scale-90 sm:scale-75 z-0 opacity-70 sm:opacity-50 translate-x-10 sm:translate-x-25"}
-                        `}
-                        style={{ backgroundColor: slide.bgColor }}
-                    >
-                        <h2 className="text-3xl md:text-3xl font-['Libre_Baskerville']">{slide.title}</h2>
-                        <p className="text-base md:text-xl font-['Roboto'] mt-2 text-left justify-center p-2 md:p-0">{slide.description}</p>
-                    </div>
-                );
-            })}
+            {/* Contenedor de las cartas */}
+            <div
+                className="relative w-4/5 md:w-2/5 h-3/5 flex justify-end items-center md:ml-auto md:mr-15 rounded-xl shadow-lg"
+                onMouseEnter={!isMobile ? () => setHovered(true) : undefined}
+                onMouseLeave={!isMobile ? () => setHovered(false) : undefined}
+                onClick={isMobile ? handleInteraction : undefined}
+            >
+                {slides.map((slide, index) => {
+                    const isFront = hovered ? index === 1 : index === 0;
+                    return (
+                        <div
+                            key={index}
+                            className={`absolute w-full h-full rounded-lg shadow-lg 
+                                flex flex-col justify-center items-center text-white  
+                                p-5 md:p-10 transition-all duration-500 transform
+                            ${isFront ? "scale-100 z-10" : "scale-90 sm:scale-75 z-0 opacity-70 sm:opacity-50 translate-x-10 sm:translate-x-25"}
+                            `}
+                            style={{ backgroundColor: slide.bgColor }}
+                        >
+                            <h2 className="text-2xl md:text-3xl font-['Libre_Baskerville']">{slide.title}</h2>
+                            <p className="text-xs md:text-base font-['Roboto'] mt-2 text-left justify-center p-2 md:p-0">
+                                {slide.description}
+                            </p>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 };
