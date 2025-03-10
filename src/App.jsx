@@ -5,16 +5,13 @@ import Mision from './components/Mision';
 import Vision from './components/Vision';
 import Servicios from './components/Servicios';
 import VisionMisionCarousel from './components/VisionMisionCarousel';
-import Team from './components/Team'
+import About_us from './components/About_us';
+
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Servicios/>
-      <Team/>
-      <VisionMisionCarousel/>
-      <Footer/>
+    <About_us/>
     </>
   );
 } 
