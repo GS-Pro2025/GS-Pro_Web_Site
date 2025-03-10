@@ -6,17 +6,24 @@ import Vision from './components/Vision';
 import Home from './components/Home';
 import Servicios from './components/Servicios';
 import VisionMisionCarousel from './components/VisionMisionCarousel';
-import Team from './components/Team'
+import About_us from './components/About_us';
+
 
 function App() {
   return (
     <>
+
+    
+
       <Navbar/>
       <Home/>
+    
       <Servicios/>
       <Team/>
+    <About_us/>
       <VisionMisionCarousel/>
       <Footer/>
+
     </>
   );
 } 
