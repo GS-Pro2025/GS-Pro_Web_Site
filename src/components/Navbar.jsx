@@ -7,17 +7,15 @@ import logoazul from "../assets/logoazul.webp";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [contactImage, setContactImage] = useState(buttonContactUs1);
-    const [navbarBg, setNavbarBg] = useState("bg-white/20 shadow-md");
+    const [navbarBg,] = useState("bg-transparent shadow-md");
     const [currentLogo, setCurrentLogo] = useState(logo);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setNavbarBg("bg-white shadow-lg");
                 setCurrentLogo(logoazul);
             } else {
-                setNavbarBg("bg-white/20 shadow-md");
                 setCurrentLogo(logo);
             }
         };
@@ -50,8 +48,6 @@ const Navbar = () => {
                                 <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Who we are</a>
                                 <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Mission</a>
                                 <a href="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Vision</a>
-
-
                             </div>
                         </div>
                         <a href="#" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Ethos</a>
@@ -75,4 +71,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
