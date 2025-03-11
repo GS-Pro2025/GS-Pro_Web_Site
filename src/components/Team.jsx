@@ -9,20 +9,33 @@ const teamMembers = [
   
 const Team = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-8 p-6 bg-transparent">
-      {teamMembers.map((member) => (
-        <div
-          key={member.id}
-          className="flex items-center gap-6 bg-transparent px-6 py-4 rounded-xl"
-        >
-          <Avatar src={member.src} alt={member.name} />
-          <div className="flex flex-col">
-            <h3 className="text-lg md:text-2xl font-bold text-gray-800">{member.name}</h3>
-            <p className="text-sm md:text-lg text-gray-500">{member.role}</p>
+    <>
+      <h2 className="mt-25 sm:mt-30 md:mt-35 text-xl sm:text-2xl md:text-3xl text-center justify-center font-['Libre_Baskerville'] ">TEAM GS-PRO</h2>
+      <div className="flex flex-wrap justify-center gap-8 p-6 bg-transparent">
+        {teamMembers.map((member) => (
+          <div
+            key={member.id}
+            className="flex items-center gap-6 bg-transparent px-6 py-4 rounded-xl"
+            style={{ animation: "fadeIn 0.8s ease-in-out" }}
+          >
+            <Avatar src={member.src} alt={member.name} />
+            <div className="flex flex-col">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-800">{member.name}</h3>
+              <p className="text-sm md:text-lg text-gray-500">{member.role}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+        <style>
+          {`
+            @keyframes fadeIn {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+          `}
+        </style>
+      </div>  
+    </>
   );
 };
+
 export default Team

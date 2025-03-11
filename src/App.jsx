@@ -1,31 +1,23 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Mision from './components/Mision';
-import Vision from './components/Vision';
-import Home from './components/Home';
-import Servicios from './components/Servicios';
-import VisionMisionCarousel from './components/VisionMisionCarousel';
-import About_us from './components/About_us';
-
-
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Pages
+import Team from "./pages/TeamPage";
+import NotFoundPage from './pages/NotFoundPage';
+import Home from './pages/HomePage';
+import AboutUsPage from './pages/AboutUsPage';
+import ContactUsPage from './pages/contactUsPage';
+import VacanciesPage from './pages/VacanciesPage';
+const App = () => {
   return (
-    <>
-
-    
-
-      <Navbar/>
-      <Home/>
-    
-      <Servicios/>
-      <Team/>
-    <About_us/>
-      <VisionMisionCarousel/>
-      <Footer/>
-
-    </>
+      <Routes>
+        <Route index element={<Home/>} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/aboutUs" element={<AboutUsPage />} />
+        <Route path="/vacancies" element={<VacanciesPage />} />
+        <Route path="/contactUs" element={<ContactUsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
   );
-} 
-export default App;
+};
 
+export default App;
