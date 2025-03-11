@@ -8,6 +8,7 @@ import Comments from "./pages/CommentsPage";
 import Vision_Mission from "./pages/Vision_MissionPage";
 import NotFoundPage from './pages/NotFoundPage';
 import Home from './pages/HomePage';
+import ValuesPage from './pages/ValuesPage';
 const App = () => {
   return (
     <BrowserRouter basename="/GS-Pro_Web_Site"> 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/vision_mission" element={<Vision_Mission />} />
         <Route path="/ethos" element={<Ethos />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/values" element={<ValuesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

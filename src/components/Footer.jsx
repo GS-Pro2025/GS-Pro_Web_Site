@@ -71,9 +71,9 @@ const Footer = () => {
 
                     {/* Footer links */}
                     <div className="flex gap-4 mt-2.5">
-                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
-                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
-                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
+                        <Link to="/vision_mission" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
+                        <Link to="/values" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
+                        <Link to="/vision_mission" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
                     </div>
 
                     {/* Footer legal links */}
