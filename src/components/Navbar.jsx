@@ -8,17 +8,15 @@ import logoazul from "../assets/logoazul.webp";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [contactImage, setContactImage] = useState(buttonContactUs1);
-    const [navbarBg, setNavbarBg] = useState("bg-white/20 shadow-md");
+    const [navbarBg,] = useState("bg-transparent shadow-md");
     const [currentLogo, setCurrentLogo] = useState(logo);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setNavbarBg("bg-white shadow-lg");
                 setCurrentLogo(logoazul);
             } else {
-                setNavbarBg("bg-white/20 shadow-md");
                 setCurrentLogo(logo);
             }
         };
