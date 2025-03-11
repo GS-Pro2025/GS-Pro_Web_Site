@@ -9,7 +9,6 @@ import ContactUsPage from './pages/contactUsPage';
 import VacanciesPage from './pages/VacanciesPage';
 const App = () => {
   return (
-    <BrowserRouter basename="/GS-Pro_Web_Site"> 
       <Routes>
         <Route index element={<Home/>} />
         <Route path="/team" element={<Team />} />
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
   );
 };
 

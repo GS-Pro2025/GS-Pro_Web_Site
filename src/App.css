@@ -1,13 +1,15 @@
 @import "tailwindcss";
 @import '@fontsource/roboto';
-
+@import '@fontsource/open-sans';
 #root {
-  max-width: 100%;/*Made changes here for helping footer*/
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
-
+.body{
+  font-family:"Open Sans";
+}
 .logo {
   height: 6em;
   padding: 1.5em;

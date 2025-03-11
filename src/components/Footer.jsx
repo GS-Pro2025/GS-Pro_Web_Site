@@ -38,7 +38,7 @@ const Footer = () => {
                     className="w-full md:w-[70%] bg-cover bg-center bg-no-repeat p-8 flex flex-col justify-center items-center text-center"
                     style={{ backgroundImage: `url(${bgImage})` }}
                 >
-                    <h2 className="text-2xl font-roboto">CONTACT</h2>
+                    <h2 className="text-2xl">CONTACT</h2>
                     <p>Contact us now</p>
                     <div className="flex justify-center gap-8 w-full md:w-[80%] my-5 flex-col md:flex-row">
                         {/* Contact info - phone*/}
@@ -71,23 +71,23 @@ const Footer = () => {
 
                     {/* Footer links */}
                     <div className="flex gap-4 mt-2.5">
-                        <Link to="/vision_mission" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
-                        <Link to="/values" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
-                        <Link to="/vision_mission" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
+                        <Link to="/aboutUs#visionMision" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
+                        <Link to="/aboutUs#values" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
+                        <Link to="/#services" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
                     </div>
 
                     {/* Footer legal links */}
                     <div className="flex gap-4 mt-2.5">
-                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</Link>
-                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Privacy Policy</Link>
+                        <Link to="/Terms_conditions" className="font-medium text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</Link>
+                        <Link to="/Privacy_policy" className="font-medium text-[#646cff] hover:text-[#535bf2]">Privacy Policy</Link>
                     </div>
                 </div>
             </div>
 
             {/* Bottom footer */}
             <div className="flex justify-between items-center w-full px-10 py-2.5 bg-[#1B1550] text-white text-sm">
-                <p className="font-roboto">Copyright © 2025. All rights reserved.</p>
-                <p className="font-roboto">1545 Gladewater Rd Kissimmee, FL 34744</p>
+                <p>Copyright © 2025. All rights reserved.</p>
+                <p>1545 Gladewater Rd Kissimmee, FL 34744</p>
             </div>
         </footer>
     );
