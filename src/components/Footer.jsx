@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/footerLogo.webp";
 import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
@@ -70,15 +71,15 @@ const Footer = () => {
 
                     {/* Footer links */}
                     <div className="flex gap-4 mt-2.5">
-                        <a href="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</a>
-                        <a href="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</a>
-                        <a href="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</a>
+                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
+                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
+                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
                     </div>
 
                     {/* Footer legal links */}
                     <div className="flex gap-4 mt-2.5">
-                        <a href="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</a>
-                        <a href="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Privacy Policy</a>
+                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</Link>
+                        <Link to="#" className="font-medium text-[#646cff] hover:text-[#535bf2]">Privacy Policy</Link>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const slides = [
     {
-        title: "Mision",
+        title: "Mission",
         description: `At GS PRO-MASTER MOVING LLC, our mission is to provide a comprehensive moving service that stands out
             for its quality, efficiency, and customer care. We are committed to handling every move with the utmost care 
             and professionalism, supported by a highly trained team. We believe in the importance of a personalized approach, 
@@ -52,7 +52,7 @@ const VisionMisionCarousel = () => {
         <div className="relative w-full h-screen flex justify-center items-center">
             {/* Texto que aparece en el lado izquierdo */}
             <div className="absolute hidden md:block left-5 md:left-20 top-1/2 transform -translate-y-1/2 text-4xl md:text-8xl font-bold text-gray-700 font-['Libre_Baskerville'] z-0">
-                {hovered ? "VISION" : "MISION"}
+                {hovered ? "VISION" : "MISSION"}
             </div>
 
             {/* Contenedor de las cartas */}
