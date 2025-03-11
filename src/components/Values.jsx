@@ -16,14 +16,15 @@ const Values = () => {
     const [showSecurity, setShowSecurity] = useState(false);
 
     return (
-        <>
-            <h2 className="md:ml-10 md:text-5xl font-['Libre_Baskerville'] text-start text-[#60A3D9]">
+        <div className="h-145 md:h-160">
+            <h2 className="mt-20 sm:mt-25 md:mt-30 md:ml-10 h-0 text-4xl md:text-5xl font-['Libre_Baskerville'] text-start text-[#60A3D9]">
                 Corporate values
             </h2>
-            <div className="flex gap-x-4 md:gap-x-0 items-center justify-start md:ml-10">
+            <div className="flex gap-x-4 md:gap-x-0 items-center justify-center md:ml-10 max-h-160">
                 {/** Compromise gears group */}
                 <div 
-                    className="relative group w-32 h-32 md:w-80 md:h-80 -mt-40 md:-mr-50"
+                    className="relative group w-70 h-70 sm:w-90 sm:h-90 md:w-80 md:h-80 -mt-5 sm:mt-10 md:-mt-40 
+                    sm:mr-20 md:-mr-50"
                     onClick={() => setShowCompromise(!showCompromise)}
                 >
                     <img 
@@ -42,7 +43,8 @@ const Values = () => {
 
                 {/** Punctuality gears group */}
                 <div 
-                    className="relative group w-32 h-32 md:w-90 md:h-90 mt-40 md:-mr-50"
+                    className="relative group w-70 h-70 sm:w-90 sm:h-90 md:w-90 md:h-90 mt-10 sm:mt-10 md:mt-50
+                        md:-mr-50"
                     onClick={() => setShowPunctuality(!showPunctuality)}
                 >
                     <img 
@@ -61,7 +63,8 @@ const Values = () => {
 
                 {/** Responsibility gears group */}
                 <div 
-                    className="relative group w-32 h-32 md:w-100 md:h-100 -mt-50 md:-mr-60"
+                    className="relative group w-70 h-70 sm:w-90 sm:h-90 md:w-100 md:h-100 mt-10 sm:mt-10
+                        md:-mt-50 md:-mr-70"
                     onClick={() => setShowResponsibility(!showResponsibility)}
                 >
                     <img 
@@ -80,7 +83,8 @@ const Values = () => {
 
                 {/** Security gears group */}
                 <div 
-                    className="relative group w-32 h-32 md:w-120 md:h-120 mt-50"
+                    className="relative group w-70 h-70 sm:w-90 sm:h-90 md:w-120 md:h-120 mt-0 sm:mt-10 sm:mt-20
+                        md:mt-65"
                     onClick={() => setShowSecurity(!showSecurity)}
                 >
                     <img 
@@ -97,7 +101,7 @@ const Values = () => {
                     />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
