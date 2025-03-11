@@ -3,14 +3,16 @@ import React from 'react';
 import VisionMisionCarousel from '../components/VisionMisionCarousel'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-const Vision_MissionPage = () => {
+import Values from '../components/Values';
+const AboutUsPage = () => {
     return(
         <>
             <Navbar/>
             <VisionMisionCarousel/>
+            <Values/>
             <Footer/>
         </>
     );
 }   
 
-export default Vision_MissionPage;
+export default AboutUsPage;

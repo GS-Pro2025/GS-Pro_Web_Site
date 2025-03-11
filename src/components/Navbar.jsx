@@ -47,35 +47,28 @@ const Navbar = () => {
                 {/* Nav - menu*/}
                 <div className={`absolute top-20 left-0 w-full bg-white md:static md:bg-transparent md:flex md:items-center md:space-x-10 md:justify-end ${menuOpen ? "block" : "hidden"}`}>
                     <div className="flex flex-col md:flex-row md:items-center w-full md:w-auto text-[#0458AB]">
-                        <div className="relative group px-6 py-3 md:p-0">
-                            <button 
-                                className="text-[#0458AB] text-xl font-semibold cursor-pointer block md:inline"
-                                onClick={() => setDropdownOpen(!dropdownOpen)}
-                                aria-expanded={dropdownOpen}
-                            >
-                                About us
-                            </button>
-                            <div className={`absolute left-0 mt-2 w-48 bg-white rounded-lg p-2 md:group-hover:block ${dropdownOpen ? "block" : "hidden"}`}>
-                                <Link to="#" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Who we are</Link>
-                                <Link to="/vision_mission" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Mission</Link>
-                                <Link to="/vision_mission" className="block px-4 py-2 text-[#0458AB] hover:bg-gray-100">Vision</Link>
-                            </div>
-                        </div>
-                        <Link to="/ethos" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Ethos</Link>
-                        <Link to="/services" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Services</Link>
+                        <Link to="/aboutUs" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">About us</Link>
                         <Link to="/team" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Team</Link>
-                        <Link to="/comments" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Comments</Link>
+                        <Link to="/vacancies" className="text-[#0458AB] text-xl font-semibold cursor-pointer px-6 py-3 block md:inline">Vacancies</Link>
                     </div>
                 </div>
 
                 {/* Contact button */}
-                <button
-                    className="hidden md:flex h-12 w-40 items-center justify-center transition-all duration-300 ml-6 border-2 border-[#0458AB] shadow-md rounded-lg"
-                    onMouseEnter={() => setContactImage(buttonContactUs2)}
-                    onMouseLeave={() => setContactImage(buttonContactUs1)}
+                <Link
+                to="/contactUs"
+                className="relative flex items-center px-10 py-1 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group"
                 >
-                    <img src={contactImage} alt="Contáctenos" className="h-full w-auto" />
-                </button>
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+                <span className="relative w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                    Contact us
+                </span>
+                </Link>
             </div>
         </nav>
     );
