@@ -1,10 +1,10 @@
 import '../App.css';
 import React from 'react';
-import InConstruction from '../components/InConstruction';
+import Contact_us from '../components/Contact_us'
 const ContactUsPage = () => {
     return(
         <>
-            <InConstruction/>
+            <Contact_us/>
         </>
     );
 }   
