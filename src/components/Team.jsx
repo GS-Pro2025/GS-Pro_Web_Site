@@ -10,7 +10,7 @@ const teamMembers = [
 const Team = () => {
   return (
     <>
-      <h2 className="mt-25 sm:mt-30 md:mt-35 text-xl sm:text-2xl md:text-3xl text-center justify-center font-['Libre_Baskerville'] ">TEAM GS-PRO</h2>
+      <h2 className="mt-25 sm:mt-30  md:mt-35 text-xl sm:text-2xl md:text-3xl text-center justify-center text-[#0458AB] font-['Libre_Baskerville'] ">TEAM GS-PRO</h2>
       <div className="flex flex-wrap justify-center gap-8 p-6 bg-transparent">
         {teamMembers.map((member) => (
           <div
@@ -20,8 +20,8 @@ const Team = () => {
           >
             <Avatar src={member.src} alt={member.name} />
             <div className="flex flex-col">
-              <h3 className="text-lg md:text-2xl font-bold text-gray-800">{member.name}</h3>
-              <p className="text-sm md:text-lg text-gray-500">{member.role}</p>
+              <h3 className="text-lg md:text-2xl font-bold text-[#0458AB]">{member.name}</h3>
+              <p className="text-sm md:text-lg text-[#0458AB]">{member.role}</p>
             </div>
           </div>
         ))}

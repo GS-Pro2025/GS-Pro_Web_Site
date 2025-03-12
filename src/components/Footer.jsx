@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/footerLogo.webp";
+import logo from "../assets/Logo.webp";
 import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
 import bgImage from "../assets/footerRectangleBig.webp";
@@ -13,12 +13,12 @@ const Footer = () => {
             <div className="flex w-full min-h-[400px] m-0 p-0 box-border flex-col md:flex-row">
                 {/* Left footer */}
                 <div className="w-full md:w-[30%] bg-gradient-to-r from-[#4E5AB1] to-[#0458AB] p-8 flex flex-col justify-center items-center text-justify">
-                    <img src={logo} alt="Logo" className="w-[500px] h-auto" />
+                    <img src={logo} alt="Logo" className="w-[300px] h-auto" />
                     <p className="max-w-full mb-4">
-                        Our company was founded in 2018 to provide a moving service primarily for homes,
-                        understanding that each household has stories, memories,
-                        and belongings that deserve the utmost care.
-                        GS PRO MASTER MOVING aims to make the moving process as easy and stress-free as possible.
+                    Safety, speed and reliability: that's what we offer at GS-PRO MASTER MOVING.
+                     We specialize in making every move an orderly and stress-free process, 
+                     ensuring that your belongings arrive in perfect condition. Let us help 
+                     you take the next step!
                     </p>
                     <p>You can find us at:</p>
                     <div className="flex gap-4 text-xl">

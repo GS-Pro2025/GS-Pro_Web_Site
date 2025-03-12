@@ -16,7 +16,7 @@ const slides = [
             excellence in service, and commitment to customer satisfaction.  
             We aim to expand our operations nationally and internationally, continuously improving our 
             services to enhance the customer experience and build a reputation based on trust, safety, and quality.`,
-        bgColor: "#505cb4",
+        bgColor: "#60A3D9",
     },
 ];
 
@@ -51,8 +51,8 @@ const VisionMisionCarousel = () => {
     return (
         <div className="relative w-full h-screen flex justify-center items-center">
             {/* Texto que aparece en el lado izquierdo */}
-            <div className="absolute hidden md:block left-5 md:left-20 top-1/2 transform -translate-y-1/2 text-4xl md:text-8xl font-bold text-gray-700 font-['Libre_Baskerville'] z-0">
-                {hovered ? "VISION" : "MISSION"}
+            <div className="absolute hidden md:block left-5 md:left-20 top-1/2 transform -translate-y-1/2 text-2xl md:text-6xl font-bold text-[#0458AB] font-['Libre_Baskerville'] z-0">
+                {hovered ? "OUR VISION" : "OUR MISSION"}
             </div>
 
             {/* Contenedor de las cartas */}

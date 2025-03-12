@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import logo from "../assets/GS-PRO-Blanco.webp";
 import whatsappIcon from "../assets/whatsapp.webp";
-import backgroundImage from "../assets/azul-537.webp";
+import backgroundImage from "../assets/azul-B73.webp";
 import QuoteForm from "./QuoteForm";
 
 const Home = () => {
@@ -18,11 +18,7 @@ const Home = () => {
       scrollAnimationFrame = requestAnimationFrame(() => {
         const scrollY = window.scrollY;
 
-        // Opacidad y desplazamiento del contenedor
-        if (containerRef.current) {
-          const opacityValue = Math.max(0.2, 1 - scrollY / 300);
-          containerRef.current.style.opacity = opacityValue;
-        }
+
 
         // Movimiento y opacidad del texto
         if (textRef.current) {
