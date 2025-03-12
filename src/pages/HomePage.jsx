@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Home from '../components/Home';
 import Servicios from '../components/Servicios';
 
+
 const HomePage = () => {
     const { hash } = useLocation();
 

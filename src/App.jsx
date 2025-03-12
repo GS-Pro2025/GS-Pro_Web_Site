@@ -9,6 +9,7 @@ import ContactUsPage from './pages/contactUsPage';
 import VacanciesPage from './pages/VacanciesPage';
 const App = () => {
   return (
+    
       <Routes>
         <Route index element={<Home/>} />
         <Route path="/team" element={<Team />} />

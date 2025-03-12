@@ -13,5 +13,4 @@ const QuoteForm = () => {
     </div>
   );
 };
-
 export default QuoteForm;
