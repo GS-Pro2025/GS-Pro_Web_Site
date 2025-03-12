@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Home from '../components/Home';
 import Servicios from '../components/Servicios';
-
+import QuoteFlow from '../components/QuoteFlow';
 
 const HomePage = () => {
     const { hash } = useLocation();
@@ -24,6 +24,13 @@ const HomePage = () => {
             <Navbar />
             <div id="home">
                 <Home />
+            </div>
+            <div className="mb-40" id="quoteFlow">
+                <h1 className="max-w-3xl font-[Libre_Baskerville] text-3xl font-bold 
+                    text-center text-[#0458AB] block mx-auto mt-20 mb-20 ">
+                    NUESTRO PROCESO DE COTIZACIÓN FUNCIONA DE LA SIGUIENTE MANERA
+                </h1>
+                <QuoteFlow/>
             </div>
             <div id="services">
                 <Servicios />
