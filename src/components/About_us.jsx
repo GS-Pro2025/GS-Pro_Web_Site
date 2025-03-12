@@ -1,11 +1,20 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import logo from "../assets/lg-negro.png";
+import MovingQuoteForm from "./MovingQuoteForm";
 
 export default function AboutUs() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
-    <div className="flex flex-col items-center px-4">
+    <div className="flex flex-col items-center px-4 relative">
+      {/* Fondo desenfocado cuando el modal está activo */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"></div>
+      )}
+
       {/* Sección Principal */}
-      <div className="max-w-5xl flex flex-col md:flex-row items-center gap-6 p-4">
+      <div className="max-w-5xl flex flex-col md:flex-row items-center gap-6 p-4 z-10">
         <img
           src={logo}
           alt="Logo"
@@ -23,51 +32,78 @@ export default function AboutUs() {
               Sabemos lo que significa mudarse con niños, mascotas y toda una vida de recuerdos, 
               por eso nos comprometemos a brindarte un servicio personalizado y confiable. 
               Creemos que el cambio de hogar debe ser una experiencia positiva para toda la familia 
-              y nos complace como empresa ser parte de este proceso. Contamos con personal capacitado 
-              y vehículos adecuados, adaptándonos siempre a las necesidades de cada familia.
+              y nos complace como empresa ser parte de este proceso.
             </p>
           </div>
         </div>
       </div>
 
-{/* Contenedor formulario */}
-<div className="w-screen bg-[#0458AB] py-13 md:h-64.5">
-  <div className="max-w-lg mx-auto px-4">
-  <motion.div
-    className="text-center text-white"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <h2 className="text-xl md:text-2xl font-semibold mb-4">Moving Quote on Demand:</h2>
+      {/* Contenedor formulario */}
+      <div className="w-screen bg-[#0458AB] py-13 md:h-64.5 z-10">
+        <div className="max-w-lg mx-auto px-4">
+          <motion.div
+            className="text-center text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-xl md:text-2xl font-semibold mb-4">Moving Quote on Demand:</h2>
 
-    <div className="grid md:grid-cols-2 gap-3">
-      <div className="flex flex-col items-start">
-        <label className="text-xs md:text-sm mb-1 font-light">From:</label>
-        <input
-          type="text"
-          placeholder="Zip code"
-          className="w-full p-2 rounded-md bg-[#003B73] text-white placeholder-blue-200 text-xs border border-[#60A3D9] focus:outline-none focus:ring-2 focus:ring-blue-300"
-        />
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className="flex flex-col items-start">
+                <label className="text-xs md:text-sm mb-1 font-light">From:</label>
+                <input
+                  type="text"
+                  placeholder="Zip code"
+                  className="w-full p-2 rounded-md bg-[#003B73] text-white placeholder-blue-200 text-xs border border-[#60A3D9] focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+              </div>
+
+              <div className="flex flex-col items-start">
+                <label className="text-xs md:text-sm mb-1 font-light">To:</label>
+                <input
+                  type="text"
+                  placeholder="Zip code"
+                  className="w-full p-2 rounded-md bg-[#003B73] text-white placeholder-blue-200 text-xs border border-[#60A3D9] focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+              </div>
+            </div>
+
+            <button
+              className="bg-[#003B73] hover:bg-[#60A3D9] text-white font-bold py-1.5 px-5 rounded-lg mt-4 text-xs transition-colors duration-300"
+              onClick={() => setShowForm(true)}
+            >
+              Get Your Free Quote
+            </button>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="flex flex-col items-start">
-        <label className="text-xs md:text-sm mb-1 font-light">To:</label>
-        <input
-          type="text"
-          placeholder="Zip code"
-          className="w-full p-2 rounded-md bg-[#003B73] text-white placeholder-blue-200 text-xs border border-[#60A3D9] focus:outline-none focus:ring-2 focus:ring-blue-300"
-        />
-      </div>
+      {/* Modal con el formulario */}
+      {showForm && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-xl w-96 relative">
+            {/* Botón para cerrar el modal */}
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-lg"
+            >
+              ✖
+            </button>
+
+            {/* Contenido del formulario */}
+            {showForm && (
+  <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-lg shadow-xl w-96 relative">
+      {/* Pasar setShowForm como prop */}
+      <MovingQuoteForm setShowForm={setShowForm} />
     </div>
+  </div>
+)}
 
-    <button className="bg-[#003B73] hover:bg-[#60A3D9] text-white font-bold py-1.5 px-5 rounded-lg mt-4 text-xs transition-colors duration-300">
-      Get Your Free Quote
-    </button>
-  </motion.div>
-</div>
-</div>
-
+          </div>
+        </div>
+      )}
     </div>
   );
 }
