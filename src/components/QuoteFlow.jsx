@@ -1,8 +1,8 @@
 import React from "react";
-import step1 from "../assets/phoneLaptop.webp";
-import step2 from "../assets/ICON_Form.webp";
-import step3 from "../assets/box.webp";
-import step4 from "../assets/pay.webp";
+import step1 from "../assets/houseElement.svg";
+import step2 from "../assets/Chest.svg";
+import step3 from "../assets/Thinking.svg";
+import step4 from "../assets/Quotize.svg";
 import arrows from "../assets/right_arrows.svg";
 
 function QuoteFlow() {
@@ -27,7 +27,7 @@ function QuoteFlow() {
                             dark:bg-[#0458AB] rounded-md group-hover:bg-opacity-0">
                                 {step.title}
                             </span>
-                            <div className="hidden group-hover:block absolute top-full left-1/2 transform -translate-x-1/2 mt-2">
+                            <div className="z-50 hidden group-hover:block absolute top-full left-1/2 transform -translate-x-1/2 mt-2">
                             <div className="h-0 w-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#0458AB] mx-auto"></div>
                                 <div className="bg-[#0458AB] text-white text-sm text-center rounded-md py-3 px-6 max-w-lg w-[300px] shadow-lg">
                                     <p className="whitespace-normal break-words">{step.text}</p>
