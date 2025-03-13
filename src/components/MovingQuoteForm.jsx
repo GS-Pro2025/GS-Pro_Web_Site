@@ -42,7 +42,7 @@ export default function MovingQuoteForm({ setShowForm }) {
           </label>
           <label className="block text-xs">
             Email:
-            <input type="email" className="w-full p-2 border rounded mt-1 text-xs" placeholder="correo@example.com" />
+            <input type="email" className="w-full p-2 border rounded mt-1 text-xs" placeholder="email@example.com" />
           </label>
           <button className="w-full bg-[#003B73] text-white py-2 rounded mt-2 hover:bg-[#002F5F] text-xs">
             Send
