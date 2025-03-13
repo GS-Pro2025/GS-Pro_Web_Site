@@ -9,7 +9,7 @@ export default function MovingQuoteForm({ setShowForm }) {
   }, []);
 
   return (
-    <div className="font-sans fixed inset-0 flex items-center justify-center z-[99999] bg-white/10 backdrop-blur-sm">
+    <div className="font-[Open_Sans] fixed inset-0 flex items-center justify-center z-[99999] bg-white/10 backdrop-blur-sm">
       <div className="relative w-80 min-h-[500px] bg-white p-6 rounded-lg shadow-lg z-[100000]">
         <button
           onClick={() => setShowForm(false)}
@@ -17,7 +17,7 @@ export default function MovingQuoteForm({ setShowForm }) {
         >
           X
         </button>
-        <h2 className="text-base">Moving quote</h2>
+        <h2 className="font-[Libre_Baskerville] text-base">Moving quote</h2>
         <p className="text-gray-600 text-xs mb-2">We ship within 2 working days</p>
         <form className="space-y-4">
           <label className="block text-xs">

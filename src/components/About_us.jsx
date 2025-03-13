@@ -7,7 +7,7 @@ export default function AboutUs() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="font-sans flex flex-col items-center px-4 relative">
+    <div className="font-[Open_Sans] flex flex-col items-center px-4 relative">
       {/* Fondo desenfocado cuando el modal está activo */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"></div>

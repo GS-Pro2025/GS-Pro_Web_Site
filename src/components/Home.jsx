@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen font-[Libre_Baskerville] grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10 overflow-hidden mb-20 transition-opacity duration-300 ease-out"
+      className="font-[Open_Sans] relative min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10 overflow-hidden mb-20 transition-opacity duration-300 ease-out"
     >
       {/* Imagen de fondo */}
       <img
@@ -59,7 +59,7 @@ const Home = () => {
       />
 
       {/* Formulario de cotización */}
-      <div ref={formRef} className="-mt-20 md:mt-0 top-1/4 right-8 md:right-20 z-10">
+      <div ref={formRef} className="-mt-20 md:-mt-48 top-1/4 right-8 md:right-20 z-10">
         <QuoteForm setShowForm={setShowForm} />
       </div>
 
@@ -70,11 +70,11 @@ const Home = () => {
     showForm ? "opacity-0 pointer-events-none" : "opacity-100"
   }`}
 >
-  <h2 className="text-xl md:text-4xl font-bold">
+  <h2 className="text-xl md:text-4xl">
     Welcome to <br />
-    <span className="text-white">GS-PRO MASTER MOVING LLC</span>
+    <span className="text-white font-[Libre_Baskerville]">GS-PRO MASTER MOVING LLC</span>
     <br />
-    <span className="text-lg md:text-xl font-light">
+    <span className="text-lg md:text-xl">
       We take care of your move, you enjoy the change.
     </span>
   </h2>

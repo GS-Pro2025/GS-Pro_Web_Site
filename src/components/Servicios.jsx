@@ -52,7 +52,7 @@ const Servicios = () => {
 
   return (
     <div
-      className="font-sans flex flex-col items-center justify-center min-h-screen text-white relative overflow-hidden transition-all duration-700 px-4 md:px-0"
+      className="font-[Open_Sans] flex flex-col items-center justify-center min-h-screen text-white relative overflow-hidden transition-all duration-700 px-4 md:px-0"
       style={{
         backgroundImage: `url(${services[0].image})`,
         backgroundSize: "cover",
@@ -63,7 +63,7 @@ const Servicios = () => {
       <div className="absolute inset-0 bg-[#003B73] opacity-50"></div>
 
       {/* Título */}
-      <h2 className="text-4xl md:text-5xl  mb-8 text-center relative z-10 md:translate-y-[-80px] md:translate-x-100 -translate-y-30 sm:translate-y-0">
+      <h2 className="font-[Libre_Baskerville] text-4xl md:text-5xl  mb-8 text-center relative z-10 md:translate-y-[-80px] md:translate-x-100 -translate-y-30 sm:translate-y-0">
         Our Services
       </h2>
 

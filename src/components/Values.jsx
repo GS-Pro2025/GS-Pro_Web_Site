@@ -16,7 +16,7 @@ const Values = () => {
     const [showSecurity, setShowSecurity] = useState(false);
 
     return (
-        <div className="h-145 md:h-160">
+        <div className="font-[Open_Sans] h-145 md:h-160">
             <h2 className="mt-20 sm:mt-25 md:mt-30 md:ml-10 h-0 text-4xl md:text-5xl font-['Libre_Baskerville'] text-start text-[#60A3D9]">
                 Corporate values
             </h2>

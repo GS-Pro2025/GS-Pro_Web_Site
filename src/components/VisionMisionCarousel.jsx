@@ -75,7 +75,7 @@ const VisionMisionCarousel = () => {
                             style={{ backgroundColor: slide.bgColor }}
                         >
                             <h2 className="text-2xl md:text-3xl font-['Libre_Baskerville']">{slide.title}</h2>
-                            <p className="text-xs md:text-base font-['Roboto'] mt-2 text-left justify-center p-2 md:p-0">
+                            <p className="text-xs md:text-base font-[Open_Sans] mt-2 text-left justify-center p-2 md:p-0">
                                 {slide.description}
                             </p>
                         </div>
