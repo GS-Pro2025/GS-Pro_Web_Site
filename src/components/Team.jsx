@@ -19,8 +19,8 @@ const Team = () => {
             style={{ animation: "fadeIn 0.8s ease-in-out" }}
           >
             <Avatar src={member.src} alt={member.name} />
-            <div className="flex flex-col">
-              <h3 className="text-lg md:text-2xl font-bold text-[#0458AB]">{member.name}</h3>
+            <div className="flex flex-col font-[Open_Sans]">
+              <h3 className="text-lg md:text-2xl text-[#0458AB]">{member.name}</h3>
               <p className="text-sm md:text-lg text-[#0458AB]">{member.role}</p>
             </div>
           </div>

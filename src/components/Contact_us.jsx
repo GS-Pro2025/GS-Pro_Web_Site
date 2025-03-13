@@ -23,7 +23,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="font-sans flex justify-center items-center min-h-screen p-4">
+    <div className="font-[Open_Sans] flex justify-center items-center min-h-screen p-4">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
         
         {/* Sección izquierda (formulario) */}
@@ -40,7 +40,7 @@ export default function ContactForm() {
                 <label htmlFor="newsletter" className="ml-2 text-sm">I would like to receive the newsletter.</label>
               </div>
               {/* Botón alineado a la izquierda en escritorio y centrado en móvil */}
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full mx-auto md:mx-0 flex">Submit</button>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-6 rounded-full mx-auto md:mx-0 flex">Submit</button>
             </form>
           </div>
         </div>

@@ -3,7 +3,7 @@ import CirclesSVG from "../assets/blue_circles.webp";
 
 const Vision = () => {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-center max-w-[90vw] md:h-190 mx-auto">
+    <div className="font-[Open_Sans] relative flex flex-col md:flex-row items-center justify-center max-w-[90vw] md:h-190 mx-auto">
       {/* Decorative circles*/}
       <img
         src={CirclesSVG}

@@ -14,12 +14,12 @@ function QuoteFlow() {
     ];
 
     return (
-        <div className="flex flex-wrap justify-center items-center gap-6">
+        <div className="font-[Open_Sans] flex flex-wrap justify-center items-center gap-6">
             {steps.map((step, index) => (
                 <React.Fragment key={step.id}>
                     <div className="relative group flex flex-col items-center">
                         <img src={step.img} alt={step.text} className="w-40 h-40 rounded-lg shadow-lg" />
-                        <button className="group relative inline-flex items-center 
+                        <button className=" font-[Libre_Baskerville] group relative inline-flex items-center 
                         justify-center p-0.5 mt-2 text-sm font-medium text-gray-900 rounded-lg bg-gradient-to-br 
                         from-[#051537] to-[#60A3D9] group-hover:from-[#04247C] group-hover:to-[#000000] hover:text-white 
                         dark:text-white focus:ring-4 focus:outline-none focus:ring-black-200 dark:focus:ring-black-800">

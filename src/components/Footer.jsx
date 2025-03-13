@@ -9,7 +9,7 @@ import {FaFacebookF, FaInstagram} from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col w-full font-sans leading-normal font-normal text-white/87 bg-[#242424] antialiased">
+        <footer className="font-[Open_Sans] flex flex-col w-full leading-normal text-white/87 bg-[#242424] antialiased">
             <div className="flex w-full min-h-[400px] m-0 p-0 box-border flex-col md:flex-row">
                 {/* Left footer */}
                 <div className="w-full md:w-[30%] bg-gradient-to-r from-[#4E5AB1] to-[#0458AB] p-8 flex flex-col justify-center items-center text-justify">
@@ -71,15 +71,15 @@ const Footer = () => {
 
                     {/* Footer links */}
                     <div className="flex gap-4 mt-2.5">
-                        <Link to="/aboutUs#visionMision" className="font-medium text-[#646cff] hover:text-[#535bf2]">Mision</Link>
-                        <Link to="/aboutUs#values" className="font-medium text-[#646cff] hover:text-[#535bf2]">Values</Link>
-                        <Link to="/#services" className="font-medium text-[#646cff] hover:text-[#535bf2]">Services</Link>
+                        <Link to="/aboutUs#visionMision" className="text-[#646cff] hover:text-[#535bf2]">Mision</Link>
+                        <Link to="/aboutUs#values" className="text-[#646cff] hover:text-[#535bf2]">Values</Link>
+                        <Link to="/#services" className="text-[#646cff] hover:text-[#535bf2]">Services</Link>
                     </div>
 
                     {/* Footer legal links */}
                     <div className="flex gap-4 mt-2.5">
-                        <Link to="/Terms_conditions" className="font-medium text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</Link>
-                        <Link to="/Privacy_policy" className="font-medium text-[#646cff] hover:text-[#535bf2]">Privacy Policy</Link>
+                        <Link to="/Terms_conditions" className="text-[#646cff] hover:text-[#535bf2]">Terms and Conditions</Link>
+                        <Link to="/Privacy_policy" className="text-[#646cff] hover:text-[#535bf2]">Privacy Policy</Link>
                     </div>
                 </div>
             </div>
