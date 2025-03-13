@@ -7,10 +7,10 @@ import arrows from "../assets/right_arrows.svg";
 
 function QuoteFlow() {
     const steps = [
-        { id: 1, title: "SOLICITAR COTIZACIÓN", text: "El primer paso es contactarnos para solicitar cotización. Puedes hacerlo a través de nuestro página web o por teléfono. Solo necesitaremos darnos información básica sobre el tipo de mudanza que necesitas.", img: step1 },
-        { id: 2, title: "PROPORCIONAR DETALLES", text: "Una vez solicitada la cotización, te pediremos que nos brindes detalles adicionales sobre tu mudanza. Esto incluye la dirección de origen y destino, el volumen de tus pertenencias, el acceso a los lugares (elevadores, escaleras, etc.) y cualquier otra información relevante que pueda afectar el tiempo y la complejidad de la mudanza.", img: step2 },
-        { id: 3, title: "ARTÍCULOS ESPECIALES", text: "Si tienes objetos delicados o de gran valor (como muebles antiguos, instrumentos musicales, equipos electrónicos, etc.), es importante mencionarlo en esta etapa. Esto nos permitirá preparar los materiales y el equipo adecuados para garantizar su seguridad durante el traslado.", img: step3 },
-        { id: 4, title: "COSTO DE MUDANZA", text: "Con toda la información proporcionada, te enviaremos una cotización detallada que incluirá el costo de la mudanza. Este precio estará basado en los detalles que nos diste, como la distancia, el volumen de la mudanza y si hay artículos especiales que necesiten un cuidado adicional.", img: step4 }
+        { id: 1, title: "SOLICITAR COTIZACIÓN", text: "El primer paso es contactarnos para solicitar cotización. Puedes hacerlo a través de nuestro página web o por teléfono. Solo necesitaremos darnos información básica sobre el tipo de mudanza que necesitas.", img: step4 },
+        { id: 2, title: "PROPORCIONAR DETALLES", text: "Una vez solicitada la cotización, te pediremos que nos brindes detalles adicionales sobre tu mudanza. Esto incluye la dirección de origen y destino, el volumen de tus pertenencias, el acceso a los lugares (elevadores, escaleras, etc.) y cualquier otra información relevante que pueda afectar el tiempo y la complejidad de la mudanza.", img: step1 },
+        { id: 3, title: "ARTÍCULOS ESPECIALES", text: "Si tienes objetos delicados o de gran valor (como muebles antiguos, instrumentos musicales, equipos electrónicos, etc.), es importante mencionarlo en esta etapa. Esto nos permitirá preparar los materiales y el equipo adecuados para garantizar su seguridad durante el traslado.", img: step2 },
+        { id: 4, title: "COSTO DE MUDANZA", text: "Con toda la información proporcionada, te enviaremos una cotización detallada que incluirá el costo de la mudanza. Este precio estará basado en los detalles que nos diste, como la distancia, el volumen de la mudanza y si hay artículos especiales que necesiten un cuidado adicional.", img: step3 }
     ];
 
     return (
