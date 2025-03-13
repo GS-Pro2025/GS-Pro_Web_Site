@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Home from '../components/Home';
 import Servicios from '../components/Servicios';
 import QuoteFlow from '../components/QuoteFlow';
+import CommentsSection from '../components/CommentsSection';
 
 const HomePage = () => {
     const { hash } = useLocation();
@@ -34,6 +35,9 @@ const HomePage = () => {
             </div>
             <div id="services">
                 <Servicios />
+            </div>
+            <div id="comments" className='mt-10 mb-10'>
+                <CommentsSection/>
             </div>
             <Footer />
         </>
