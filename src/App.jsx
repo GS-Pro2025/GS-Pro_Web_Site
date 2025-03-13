@@ -7,7 +7,6 @@ import Home from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/contactUsPage';
 import VacanciesPage from './pages/VacanciesPage';
-
 const App = () => {
   return (
     
