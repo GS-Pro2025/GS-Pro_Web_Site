@@ -3,11 +3,18 @@ import Comment from "./Comment";
 
 const CommentsCarousel = ({ comments }) => {
     const [currentIndex, setCurrentIndex] = useState(2); // El centro
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const intervalRef = useRef(null);
 
     useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+
         startAutoSlide();
-        return () => stopAutoSlide();
+        return () => {
+            stopAutoSlide();
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
 
     const startAutoSlide = () => {
@@ -24,6 +31,12 @@ const CommentsCarousel = ({ comments }) => {
         }
     };
 
+    const handleCardClick = (index) => {
+        stopAutoSlide();
+        setCurrentIndex(index); 
+        startAutoSlide(); 
+    };
+
     return (
         <div
             className="relative flex justify-center items-center w-full max-w-6xl mx-auto mt-10 h-80 overflow-hidden min-h-[500px]"
@@ -32,7 +45,7 @@ const CommentsCarousel = ({ comments }) => {
         >
             {comments.map((comment, index) => {
                 const position = index - currentIndex;
-                let translateXValue = position * (window.innerWidth < 768 ? 100 : 120); // En móviles usa 100%
+                let translateXValue = position * (isMobile ? 100 : 120);
                 let scaleValue = position === 0 ? 1.2 : 0.9;
 
                 let styles = {
@@ -40,11 +53,16 @@ const CommentsCarousel = ({ comments }) => {
                     opacity: position === 0 ? 1 : 0.5,
                     transition: "transform 0.8s ease, opacity 0.8s ease",
                     zIndex: position === 0 ? 10 : 5,
+                    cursor: "pointer",
                 };
 
-
                 return (
-                    <div key={index} className="absolute w-64" style={styles}>
+                    <div 
+                        key={index} 
+                        className="absolute w-64" 
+                        style={styles}
+                        onClick={() => handleCardClick(index)}
+                    >
                         <Comment {...comment} />
                     </div>
                 );
