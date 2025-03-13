@@ -39,6 +39,7 @@ const HomePage = () => {
             <div id="comments" className='mt-10 mb-10'>
                 <CommentsSection/>
             </div>
+            
             <Footer />
         </>
     );

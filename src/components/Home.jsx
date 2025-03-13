@@ -1,38 +1,36 @@
-import { useEffect, useRef } from "react";
-import logo from "../assets/GS-PRO-Blanco.webp";
+import { useEffect, useRef, useState } from "react";
 import whatsappIcon from "../assets/whatsapp.webp";
-import backgroundImage from "../assets/azul-B73.webp";
+import backgroundImage from "../assets/fondo_web.svg";
 import QuoteForm from "./QuoteForm";
+import MovingQuoteForm from "./MovingQuoteForm"; // Importamos el modal
 
 const Home = () => {
   const containerRef = useRef(null);
   const textRef = useRef(null);
   const logoRef = useRef(null);
   const formRef = useRef(null);
+  const [showForm, setShowForm] = useState(false); // Estado para mostrar el modal
 
   useEffect(() => {
     let scrollAnimationFrame;
 
     const handleScroll = () => {
+      if (showForm) return; 
+
       if (scrollAnimationFrame) return;
       scrollAnimationFrame = requestAnimationFrame(() => {
         const scrollY = window.scrollY;
 
-
-
-        // Movimiento y opacidad del texto
         if (textRef.current) {
           textRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
           textRef.current.style.opacity = Math.max(0, 1 - scrollY / 200);
         }
 
-        // Transformación del logo
         if (logoRef.current) {
           logoRef.current.style.transform = `scale(${Math.max(0.8, 1 - scrollY / 800)})`;
           logoRef.current.style.opacity = Math.max(0, 1 - scrollY / 250);
         }
 
-        // Opacidad del formulario
         if (formRef.current) {
           formRef.current.style.opacity = Math.max(0, 1 - scrollY / 200);
         }
@@ -46,47 +44,45 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
       if (scrollAnimationFrame) cancelAnimationFrame(scrollAnimationFrame);
     };
-  }, []);
+  }, [showForm]); 
 
   return (
     <div
       ref={containerRef}
       className="relative min-h-screen font-[Libre_Baskerville] grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-10 overflow-hidden mb-20 transition-opacity duration-300 ease-out"
     >
-      {/* Imagen de fondo fija */}
+      {/* Imagen de fondo */}
       <img
         src={backgroundImage}
         alt="Background"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
+      {/* Formulario de cotización */}
+      <div ref={formRef} className="-mt-20 md:mt-0 top-1/4 right-8 md:right-20 z-10">
+        <QuoteForm setShowForm={setShowForm} />
+      </div>
+
       {/* Contenido principal */}
       <div
-        ref={textRef}
-        className="relative z-10 mt-16 flex flex-col items-center md:items-start text-white text-center md:text-left w-full"
-      >
-        <h2 className="text-xl md:text-4xl font-bold text-center">
-          Welcome to <br /> <span className="text-[#0458AB]">GS-PRO MASTER MOVING LLC</span> <br />
-          <span className="text-lg md:text-xl font-light">
-            We take care of your move, you enjoy the change.
-          </span>
-        </h2>
+  ref={textRef}
+  className={`relative z-10 -mt-190 md:-mt-100 md:-ml-50  flex flex-col items-center md:items-start text-white text-center md:text-left w-full transition-all duration-300 ${
+    showForm ? "opacity-0 pointer-events-none" : "opacity-100"
+  }`}
+>
+  <h2 className="text-xl md:text-4xl font-bold">
+    Welcome to <br />
+    <span className="text-white">GS-PRO MASTER MOVING LLC</span>
+    <br />
+    <span className="text-lg md:text-xl font-light">
+      We take care of your move, you enjoy the change.
+    </span>
+  </h2>
+</div>
 
-        {/* Logo animado */}
-        <div className="mt-8 flex justify-center w-full">
-          <img
-            ref={logoRef}
-            src={logo}
-            alt="GS PRO Logo"
-            className="w-48 md:w-72 transition-transform duration-300 ease-out hover:scale-105"
-          />
-        </div>
-      </div>
 
-      {/* Formulario de cotización */}
-      <div ref={formRef} className="top-1/4 right-8 md:right-12 z-10">
-        <QuoteForm />
-      </div>
+
+
 
       {/* Botón flotante de WhatsApp */}
       <a
@@ -95,8 +91,16 @@ const Home = () => {
       >
         <img src={whatsappIcon} alt="WhatsApp" className="w-12 h-12" />
       </a>
+
+      {/* Modal fuera del flujo del contenido */}
+      {showForm && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+          <MovingQuoteForm setShowForm={setShowForm} />
+        </div>
+      )}
     </div>
   );
 };
 
 export default Home;
+  
