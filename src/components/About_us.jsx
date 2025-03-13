@@ -7,7 +7,7 @@ export default function AboutUs() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="flex flex-col items-center px-4 relative">
+    <div className="font-sans flex flex-col items-center px-4 relative">
       {/* Fondo desenfocado cuando el modal está activo */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"></div>
@@ -21,14 +21,14 @@ export default function AboutUs() {
           className="w-1/2 md:w-1/3 max-w-xs rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
         />
         <div className="md:w-2/3 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-[#0458AB]">🌟 SOBRE NOSOTROS</h2>
+          <h2 className="text-3xl text-[#0458AB]">🌟 SOBRE NOSOTROS</h2>
           <p className="mt-2 text-gray-600 text-sm leading-relaxed">
             Nuestra empresa nace desde el 2018 para ofrecer un servicio de mudanzas principalmente de casas, 
             entendiendo que cada hogar tiene historias, recuerdos y pertenencias que merecen el máximo cuidado. 
             GS PRO MASTER MOVING tiene como objetivo hacer que el proceso de mudanza sea lo más fácil y libre de estrés.
           </p>
           <div className="bg-gray-100 text-center p-3 mt-3 rounded-lg shadow-lg border-l-4 border-blue-500">
-            <p className="text-gray-700 text-sm font-medium">
+            <p className="text-gray-700 font-medium">
               Sabemos lo que significa mudarse con niños, mascotas y toda una vida de recuerdos, 
               por eso nos comprometemos a brindarte un servicio personalizado y confiable. 
               Creemos que el cambio de hogar debe ser una experiencia positiva para toda la familia 
@@ -47,11 +47,11 @@ export default function AboutUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl md:text-2xl font-semibold mb-4">Moving Quote on Demand:</h2>
+            <h2 className="text-xl md:text-2xl mb-4">Moving Quote on Demand:</h2>
 
             <div className="grid md:grid-cols-2 gap-3">
               <div className="flex flex-col items-start">
-                <label className="text-xs md:text-sm mb-1 font-light">From:</label>
+                <label className="text-xs md:text-sm mb-1">From:</label>
                 <input
                   type="text"
                   placeholder="Zip code"
@@ -60,7 +60,7 @@ export default function AboutUs() {
               </div>
 
               <div className="flex flex-col items-start">
-                <label className="text-xs md:text-sm mb-1 font-light">To:</label>
+                <label className="text-xs md:text-sm mb-1">To:</label>
                 <input
                   type="text"
                   placeholder="Zip code"
@@ -70,7 +70,7 @@ export default function AboutUs() {
             </div>
 
             <button
-              className="bg-[#003B73] hover:bg-[#60A3D9] text-white font-bold py-1.5 px-5 rounded-lg mt-4 text-xs transition-colors duration-300"
+              className="bg-[#003B73] hover:bg-[#60A3D9] text-white py-1.5 px-5 rounded-lg mt-4 text-xs transition-colors duration-300"
               onClick={() => setShowForm(true)}
             >
               Get Your Free Quote
