@@ -52,7 +52,7 @@ const Servicios = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen text-white relative overflow-hidden transition-all duration-700 px-4 md:px-0"
+      className="font-[Open_Sans] flex flex-col items-center justify-center min-h-screen text-white relative overflow-hidden transition-all duration-700 px-4 md:px-0"
       style={{
         backgroundImage: `url(${services[0].image})`,
         backgroundSize: "cover",
@@ -63,14 +63,14 @@ const Servicios = () => {
       <div className="absolute inset-0 bg-[#003B73] opacity-50"></div>
 
       {/* Título */}
-      <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center relative z-10 md:translate-y-[-80px] md:translate-x-100 -translate-y-30 sm:translate-y-0">
+      <h2 className="font-[Libre_Baskerville] text-4xl md:text-5xl  mb-8 text-center relative z-10 md:translate-y-[-80px] md:translate-x-100 -translate-y-30 sm:translate-y-0">
         Our Services
       </h2>
 
       <div className="relative w-full max-w-6xl flex items-center justify-center overflow-visible z-10">
         {/* Descripción */}
         <div className="absolute left-4 md:left-8 top-[90%] md:top-[50%] transform -translate-y-1/2 p-4 md:p-5 rounded-lg shadow-lg w-64 md:w-80">
-          <h3 className="text-xl md:text-3xl font-bold">{services[0].title}</h3>
+          <h3 className="text-xl md:text-3xl ">{services[0].title}</h3>
           <p className="text-sm md:text-lg">{services[0].description}</p>
         </div>
 

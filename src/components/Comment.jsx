@@ -2,7 +2,7 @@ import React from 'react';
 
 const Comment = ({ name, charge, comment, rating }) => {
     return (
-        <div className="w-full h-auto p-6 bg-[#003B73] border border-gray-200 rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105 relative group flex flex-col justify-between min-h-[200px] md:min-h-[250px]">
+        <div className="font-[Open_Sans] w-full h-auto p-6 bg-[#003B73] border border-gray-200 rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-105 relative group flex flex-col justify-between min-h-[200px] md:min-h-[250px]">
             {/* Background Hover Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white opacity-0 transition-opacity duration-500 group-hover:opacity-30 blur-md"></div>
 
@@ -24,13 +24,13 @@ const Comment = ({ name, charge, comment, rating }) => {
                 </div>
 
                 {/* Comment */}
-                <p className="font-open-sans text-white text-base md:text-lg">{comment}</p>
+                <p className="text-white text-base md:text-lg">{comment}</p>
             </div>
 
             {/* Name and Charge */}
             <div className="relative z-10 pt-4 border-t border-gray-300 text-white">
-                <p className="font-open-sans text-sm md:text-lg font-semibold">{name}</p>
-                <p className="font-open-sans text-base md:text-2xl font-bold">{charge}</p>
+                <p className="text-sm md:text-lg">{name}</p>
+                <p className="text-base md:text-2xl">{charge}</p>
             </div>
         </div>
     );
