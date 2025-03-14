@@ -70,7 +70,7 @@ const CommentsSection = () => {
     <>
         <h3 className="font-open-sans text-2xl text-[#0458AB]">People say about us</h3>
         <h2 className="font-open-sans text-5xl text-[#0458AB]">Feedback from you</h2>
-        <CommentsCarousel comments={comments} />;
+        <CommentsCarousel comments={comments} />
     </> 
     );
 };
