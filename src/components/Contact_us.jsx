@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
 import ContactImage from "../assets/Contact_us.webp";
-import {FaFacebookF, FaInstagram} from "react-icons/fa";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", content: "", newsletter: false });
@@ -23,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="font-[Open_Sans] flex justify-center items-center min-h-screen p-4">
+    <div className="font-[Open_Sans] flex justify-center items-center min-h-screen p-4 pt-18 md:pt-0">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
         
         {/* Sección izquierda (formulario) */}
