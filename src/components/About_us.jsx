@@ -7,7 +7,7 @@ export default function AboutUs() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="font-[Open_Sans] flex flex-col items-center px-4 relative">
+    <div className="font-[Open_Sans] flex flex-col items-center px-4 relative pt-10">
       {/* Fondo desenfocado cuando el modal está activo */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"></div>
@@ -21,18 +21,17 @@ export default function AboutUs() {
           className="w-1/2 md:w-1/3 max-w-xs rounded-lg shadow-lg transition-all duration-500 hover:scale-105"
         />
         <div className="md:w-2/3 text-center md:text-left">
-          <h2 className="text-3xl text-[#0458AB]">🌟 SOBRE NOSOTROS</h2>
+          <h2 className="text-3xl text-[#0458AB]">🌟ABOUT US</h2>
           <p className="mt-2 text-gray-600 text-sm leading-relaxed">
-            Nuestra empresa nace desde el 2018 para ofrecer un servicio de mudanzas principalmente de casas, 
-            entendiendo que cada hogar tiene historias, recuerdos y pertenencias que merecen el máximo cuidado. 
-            GS PRO MASTER MOVING tiene como objetivo hacer que el proceso de mudanza sea lo más fácil y libre de estrés.
+          Our company was born in 2018 to offer a moving service mainly for houses, 
+          understanding that each home has stories, memories and belongings that deserve the utmost care. 
+          GS PRO MASTER MOVING aims to make the moving process as easy and stress-free as possible.
           </p>
           <div className="bg-gray-100 text-center p-3 mt-3 rounded-lg shadow-lg border-l-4 border-blue-500">
-            <p className="text-gray-700 font-medium">
-              Sabemos lo que significa mudarse con niños, mascotas y toda una vida de recuerdos, 
-              por eso nos comprometemos a brindarte un servicio personalizado y confiable. 
-              Creemos que el cambio de hogar debe ser una experiencia positiva para toda la familia 
-              y nos complace como empresa ser parte de este proceso.
+            <p className="text-gray-700">
+            We know what it means to move in with children, pets, and a lifetime of memories, 
+            that's why we're committed to providing you with a personalized and reliable service. 
+            We believe that moving home should be a positive experience for the whole family and we're pleased as a company to be a part of this process.
             </p>
           </div>
         </div>
