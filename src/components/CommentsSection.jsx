@@ -4,74 +4,73 @@ import CommentsCarousel from "./CommentsCarousel";
 const comments = [
     { 
         name: "Juan Pérez", 
-        charge: "Excelente servicio", 
-        comment: "Me encantó la rapidez y la atención. Desde el primer momento en que realicé mi pedido, el proceso fue fluido y sin complicaciones. Sin duda, repetiré mi compra.", 
+        charge: "Excellent service", 
+        comment: "I loved the speed and the attention. From the very moment I placed my order, the process was smooth and hassle-free. I will definitely order again.", 
         rating: 5 
     },
     { 
         name: "Ana Gómez", 
-        charge: "Muy recomendable", 
-        comment: "Todo llegó en perfecto estado. Me preocupaba que pudiera haber algún inconveniente con la entrega, pero el embalaje fue seguro y el producto impecable.", 
+        charge: "Highly recommended", 
+        comment: "Everything arrived in perfect condition. I was worried there might be some issues with the delivery, but the packaging was secure and the product impeccable.", 
         rating: 4 
     },
     { 
         name: "Carlos Ramírez", 
-        charge: "Buen precio", 
-        comment: "El costo fue justo y el servicio eficiente. Comparado con otras opciones del mercado, encontré aquí una relación calidad-precio difícil de superar.", 
+        charge: "Good price", 
+        comment: "The cost was fair and the service efficient. Compared to other market options, I found a value-for-money ratio that's hard to beat.", 
         rating: 5 
     },
     { 
         name: "María Fernández", 
-        charge: "Satisfactorio", 
-        comment: "Cumplió con mis expectativas, pero podría mejorar. Aunque el producto llegó a tiempo, me gustaría que tuvieran más opciones de personalización.", 
+        charge: "Satisfactory", 
+        comment: "It met my expectations, but could be improved. Although the product arrived on time, I wish there were more customization options.", 
         rating: 3 
     },
     { 
         name: "Luis Torres", 
-        charge: "Increíble atención", 
-        comment: "El personal fue muy amable y atento. Se tomaron el tiempo de explicarme cada detalle del producto y resolvieron todas mis dudas sin apuro.", 
+        charge: "Incredible service", 
+        comment: "The staff was very friendly and attentive. They took the time to explain every detail of the product and answered all my questions without rush.", 
         rating: 5 
     },
     { 
         name: "Luis Messi", 
-        charge: "Recomendado", 
-        comment: "Excelente servicio. He probado muchas empresas similares, pero esta destaca por su rapidez y profesionalismo en la entrega.", 
+        charge: "Recommended", 
+        comment: "Excellent service. I have tried many similar companies, but this one stands out for its speed and professionalism in delivery.", 
         rating: 5 
     },
     { 
         name: "Sofía López", 
-        charge: "Muy satisfecha", 
-        comment: "El producto superó mis expectativas. La calidad de los materiales y la atención al detalle hicieron que mi compra valiera totalmente la pena.", 
+        charge: "Very satisfied", 
+        comment: "The product exceeded my expectations. The quality of the materials and the attention to detail made my purchase completely worthwhile.", 
         rating: 5 
     },
     { 
         name: "Ricardo Gómez", 
-        charge: "Entrega rápida", 
-        comment: "No esperaba que el envío fuera tan veloz. Recibí mi pedido incluso antes del tiempo estimado, y eso me dejó muy sorprendido y feliz.", 
+        charge: "Fast delivery", 
+        comment: "I didn't expect the shipping to be so fast. I received my order even before the estimated time, and that left me very surprised and happy.", 
         rating: 4 
     },
     { 
         name: "Valentina Ríos", 
-        charge: "Calidad garantizada", 
-        comment: "Desde el primer momento se nota que los productos son de calidad. Se siente la diferencia en los materiales y en la durabilidad del artículo.", 
+        charge: "Quality guaranteed", 
+        comment: "From the very first moment, it is evident that the products are of high quality. You can feel the difference in the materials and in the durability of the item.", 
         rating: 5 
     },
     { 
         name: "Fernando Castillo", 
-        charge: "Atención al cliente excepcional", 
-        comment: "Tuve un pequeño problema con mi orden y el equipo de soporte lo solucionó en minutos. Fue una experiencia muy positiva que me hizo confiar más en la empresa.", 
+        charge: "Exceptional customer service", 
+        comment: "I had a small issue with my order and the support team solved it within minutes. It was a very positive experience that made me trust the company even more.", 
         rating: 5 
     }
 ];
 
-
 const CommentsSection = () => {
-    return(
-    <>
-        <h3 className="font-open-sans text-2xl text-[#0458AB]">People say about us</h3>
-        <h2 className="font-open-sans text-5xl text-[#0458AB]">Feedback from you</h2>
-        <CommentsCarousel comments={comments} />
-    </> 
+    return (
+        <>
+            <h3 className="font-open-sans text-2xl text-[#0458AB]">People say about us</h3>
+            <h2 className="font-open-sans text-5xl text-[#0458AB]">Feedback from you</h2>
+            <CommentsCarousel comments={comments} />
+        </>
     );
 };
 
