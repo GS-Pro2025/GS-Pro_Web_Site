@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/Logo.webp";
+import logo from "../assets/logo.webp";
 import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
 import bgImage from "../assets/footerRectangleBig.webp";
