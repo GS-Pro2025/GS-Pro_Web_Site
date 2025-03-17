@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import step1 from "../assets/houseElement.svg";
+import step1 from "../assets/HouseElement.svg";
 import step2 from "../assets/Chest.svg";
 import step3 from "../assets/Thinking.svg";
 import step4 from "../assets/Quotize.svg";
