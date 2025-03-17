@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import whatsappIcon from "../assets/whatsapp.webp";
-import backgroundImage from "../assets/Fondo_web.svg";
+import backgroundImage from "../assets/fondo_web.svg";
 import QuoteForm from "./QuoteForm";
 import MovingQuoteForm from "./MovingQuoteForm"; // Importamos el modal
 
